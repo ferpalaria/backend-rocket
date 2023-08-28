@@ -1,0 +1,4 @@
+node_modules
+
+database/sqlite/database.db
+src/database/database.db
