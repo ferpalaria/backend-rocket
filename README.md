@@ -1,4 +1,4 @@
-# Projeto de estudo sobre Node.js
+# Projeto de estudo sobre backend usando Node.js
 
 ## Techs
 
@@ -15,37 +15,9 @@
 - knex.js: ORM - query builder
 
 ## Estrutura do projeto 
-```
-├── README.md
-├── knexfile.js
-├── package-lock.json
-├── package.json
-└── src
-    ├── controllers
-    │   ├── NotesController.js
-    │   ├── TagsController.js
-    │   └── UsersController.js
-    ├── database
-    │   ├── database.db
-    │   ├── knex
-    │   │   ├── index.js
-    │   │   └── migrations
-    │   │       ├── 20230325212555_createNotes.js
-    │   │       ├── 20230325221458_createTags.js
-    │   │       └── 20230325222022_createLinks.js
-    │   └── sqlite
-    │       ├── index.js
-    │       └── migrations
-    │           ├── createUsers.js
-    │           └── index.js
-    ├── routes
-    │   ├── index.js
-    │   ├── notes.routes.js
-    │   ├── tags.routes.js
-    │   └── users.routes.js
-    ├── server.js
-    └── utils
-        └── AppError.js
+```mermaid
+flowchart TD
+  A[A] --> |middle| B[B];
 ```
 ## Anotações sobre a aula
 

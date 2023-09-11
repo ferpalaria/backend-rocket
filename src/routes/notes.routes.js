@@ -1,23 +1,17 @@
 const { Router } = require("express");
 
 const NotesController = require("../controllers/NotesController");
-const ensureAuthenricated = ("../middlewares/ensureAuthenricated");
-
+const ensureAuthenticated = require("../middlewares/ensureAuthenricated");
 
 const notesRoutes = Router();
 
-function myMiddleware(req, resp, next) {
-    next();
-}
-
 const notesController = new NotesController();
 
-// notesRoutes.use(myMiddleware); // Para usar em todas as requisições de /user
-notesRoutes.use(ensureAuthenricated);
+notesRoutes.use(ensureAuthenticated);
 
-notesRoutes.get("/", myMiddleware, notesController.index);
-notesRoutes.post("/", myMiddleware, notesController.create);
-notesRoutes.get("/:id", myMiddleware, notesController.show);
-notesRoutes.delete("/:id", myMiddleware, notesController.delete);
+notesRoutes.post("/", notesController.create);
+notesRoutes.get("/:id", notesController.show);
+notesRoutes.delete("/:id", notesController.delete);
+notesRoutes.get("/", notesController.index);
 
 module.exports = notesRoutes;
