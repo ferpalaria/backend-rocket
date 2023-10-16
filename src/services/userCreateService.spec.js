@@ -1,14 +1,14 @@
 const UserCreateService = require('./UserCreateService');
-const UserRepositoryInmemory = require("../repositories/UserRepositoryInMemory");
+const UserRepositoryInMemory = require("../repositories/UserRepositoryInMemory");
 
-it("user shold be created", () => {
+it("User should be created", async () => {
     const user = {
         name: "User Test",
-        eail: "user@test.com",
+        email: "usersss@test.com",
         password: "123"
     };
 
-    const userRepositoryInMemory = new UserRepositoryInmemory();
+    const userRepositoryInMemory = new UserRepositoryInMemory();
     const userCreateService = new UserCreateService(userRepositoryInMemory);
     const userCreated = await userCreateService.execute(user);
 

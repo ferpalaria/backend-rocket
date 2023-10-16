@@ -7,15 +7,15 @@ class UserCreateService{
         this.userRepository = userRepository;
     }
 
-    async create({ name, email, password}) {
+    async execute({ name, email, password}) {
 
-        const chackUserExists = this.userRepository.findByEmail(email);
+        const checkUserExists = this.userRepository.findByEmail(email);
 
-        if (chackUserExists) {
+        if (checkUserExists) {
             throw new AppError("Este e-mail já existe");
         }
 
-        const hashedPassword = await hash(pass, 8);
+        const hashedPassword = await hash(password, 8);
 
         console.log(hashedPassword);
 
@@ -25,4 +25,4 @@ class UserCreateService{
     }
 }
 
-modulo.exports = UserCreateService;
+module.exports = UserCreateService;
