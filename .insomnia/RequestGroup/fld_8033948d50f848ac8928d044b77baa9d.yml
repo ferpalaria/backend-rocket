@@ -1,0 +1,13 @@
+_id: fld_8033948d50f848ac8928d044b77baa9d
+type: RequestGroup
+parentId: wrk_a05ea9a7dcb74609a690a8ed35df7753
+modified: 1694384576126
+created: 1694384335585
+name: Sessions
+description: ""
+environment:
+  RESOURCE: sessions
+environmentPropertyOrder:
+  "&":
+    - RESOURCE
+metaSortKey: -1694384335585

@@ -1,0 +1,31 @@
+_id: req_3edbd939b63c4c7f8c270995a638ce00
+type: Request
+parentId: fld_8033948d50f848ac8928d044b77baa9d
+modified: 1694384632230
+created: 1694384381904
+url: /{{ _.RESOURCE }}
+name: Create
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "fernanda@email.com",
+    	"password": "123" 
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694384381904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
